@@ -1,0 +1,106 @@
+.container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form{
+    width: 200px;
+    margin: 20px auto;
+}
+
+.user{
+    display: flex;
+    width: 300px;
+    height: 160px; 
+    background: rgb(46, 44, 44);
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+    padding: 0;
+    color: aliceblue;
+}
+
+.remove_button {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 25px;
+    left: 138px;
+    /* border: none;
+    background: none; */
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .remove_button:hover {
+    background: #fdfdfd;
+  }
+
+  .save_button{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    bottom: 135px;
+    left: 138px;
+    /* border: none;
+    background: none; */
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .save_button:hover {
+    background: #fdfdfd;
+  }
+
+  input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .inputName{
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .inputAge{
+  
+    padding: 8px 16px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .button {
+    width: 100%;
+    background: rgb(46, 44, 44);
+    color: aliceblue;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .button:hover{
+      opacity: 0.8;
+  }
+
+  label{
+      font-size: 16px;
+      font-weight: bold;
+  }
+
