@@ -22,10 +22,12 @@ const renderUsers = () => {
         
         const inputAge = document.createElement(`input`);
         inputAge.classList.add(`inputAge`);
+        inputAge.type = 'number'
         inputAge.value = `${user.age}`;
 
         const inputName = document.createElement(`input`);
         inputName.classList.add(`inputName`);
+        inputName.type = 'text'
         inputName.value = `${user.name}`;
 
         const removeBtn = document.createElement('button');
@@ -58,23 +60,25 @@ const deleteUser =  async (userId, userItem) => {
             method: 'DELETE',
             headers: {
                 Accept: 'application/json',
-                'Content-Type': 'application/json',}
+                'Content-Type': 'application/json'}
         });
         if (res.status !== 200) throw new Error();
         users = users.filter((user) => user.id !== userId);
         userItem.remove();
     } catch (err) {
-        console.log(`Can't delete a user,`, err);   
+        console.log(`Can't delete a user`, err);   
     }
 }
 //////create user in server
 const createUser = () => {
+    const name = document.querySelector(`#name`).value;
+    const age = document.querySelector(`#age`).value;
     fetch(API , {
         method: `POST`,
         body: JSON.stringify({name: name, age: age}),
         headers: {
             Accept: 'application/json',
-            'Content-Type': 'application/json',}
+            'Content-Type': 'application/json'}
     }).then(res => {
         return (res.json());
     }).catch(err => {
@@ -98,11 +102,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const createUserBtn = document.querySelector('#create_user')
     createUserBtn.addEventListener('click', createCard);
   });
-
-
-
-
-
-
-
-
