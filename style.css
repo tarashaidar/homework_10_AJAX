@@ -56,8 +56,7 @@ form{
     background: #fdfdfd;
   }
 
-  input[type=text], input[type=number] {
-    width: 100%;
+  #name, #age {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -76,7 +75,6 @@ form{
   }
 
   .inputAge{
-  
     padding: 8px 16px;
     display: inline-block;
     border: 1px solid #ccc;
