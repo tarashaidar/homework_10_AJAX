@@ -39,7 +39,11 @@ const renderUsers = () => {
         const saveBtn = document.createElement('button');
         saveBtn.classList.add('save_button');
         saveBtn.innerHTML = '&#10003';
-        saveBtn.addEventListener('click', createUser);
+        if (inputAge.value === '' || inputName.value === '') {
+            throw new Error('You need type something ') 
+        }else{
+            saveBtn.addEventListener('click', createUser);
+        }
 
         userItem.append(saveBtn);
         userItem.append(removeBtn);
